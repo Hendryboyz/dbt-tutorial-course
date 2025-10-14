@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: stg_ecommerce__products
+    description: ""
+    columns:
+      - name: product_id
+        description: ""
+        tests:
+          - not_null
+          - unique
+
+      - name: cost
+        description: ""
+        tests:
+          - not_null
+
+      - name: brand
+        description: ""
+
+      - name: retail_price
+        description: ""
+        tests:
+          - not_null
+
+      - name: department
+        description: ""
+        tests:
+          - not_null
+          - accepted_values:
+              values:
+                - "Men"
+                - "Women"
+              quote: true
