@@ -7,7 +7,7 @@ models:
 
     columns:
       - name: order_id
-        description: ""
+        description: "just the order id!"
         # https://docs.getdbt.com/faqs/Tests/available-tests
         tests:
           - not_null:

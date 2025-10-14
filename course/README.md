@@ -1,10 +1,13 @@
 Welcome to your new dbt project!
 
-### Using the starter project
+## Project Structure
 
-Try running the following commands:
-- dbt run
-- dbt test
+### `target` directory
+
+`manifest.json` is assets from `dbt compile` the tell DBT how to execute dbt command like:
+
+- `dbt run`
+- `dbt test`
 
 
 ### Resources:

@@ -5,7 +5,7 @@ models:
     description: ""
     columns:
       - name: product_id
-        description: ""
+        description: "product id"
         tests:
           - not_null
           - unique
