@@ -1,0 +1,62 @@
+version: 2
+
+models:
+  - name: stg_ecommerce__orders
+    description: >
+      Table of 1 row per order
+
+    columns:
+      - name: order_id
+        description: "just the order id!"
+        # https://docs.getdbt.com/faqs/Tests/available-tests
+        tests:
+          - not_null:
+              severity: error
+          - unique:
+              severity: error
+
+      - name: user_id
+        description: ""
+        tests:
+          - not_null
+
+      - name: status
+        description: ""
+        tests:
+          - not_null
+          - accepted_values:
+              name: unexpect_order_status
+              values:
+                - Processing
+                - Cancelled
+                - Shipped
+                - Complete
+                - Returned
+
+      - name: created_at
+        description: ""
+        tests:
+          - not_null
+
+      - name: returned_at
+        description: ""
+        tests:
+          - not_null:
+              where: "status = 'Returned'"
+
+      - name: shipped_at
+        description: ""
+        tests:
+          - not_null:
+              where: "delivered_at IS NOT NULL OR status = 'Shipped'"
+
+      - name: delivered_at
+        description: ""
+        tests:
+          - not_null:
+              where: "returned_at IS NOT NULL OR status = 'Complete'"
+
+      - name: num_items_ordered
+        tests:
+          - not_null
+

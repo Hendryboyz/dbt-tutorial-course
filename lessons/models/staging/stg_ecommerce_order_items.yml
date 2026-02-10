@@ -1,0 +1,18 @@
+models:
+  - name: stg_ecommerce_order_items
+    description: ""
+    columns:
+      - name: order_item_id
+        description: ""
+
+      - name: order_id
+        description: ""
+
+      - name: user_id
+        description: ""
+
+      - name: product_id
+        description: ""
+
+      - name: sale_price
+        description: ""

@@ -1,0 +1,15 @@
+models:
+  - name: stg_ecommerce_products
+    description: ""
+    columns:
+      - name: product_id
+        description: ""
+
+      - name: cost
+        description: ""
+
+      - name: retail_price
+        description: ""
+
+      - name: department
+        description: ""

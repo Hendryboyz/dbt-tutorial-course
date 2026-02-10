@@ -1,5 +1,9 @@
 Welcome to your new dbt project!
 
+## Models
+
+###
+
 ### Using the starter project
 
 Try running the following commands:
