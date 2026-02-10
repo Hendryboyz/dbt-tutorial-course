@@ -1,5 +1,7 @@
+version: 2
+
 models:
-  - name: stg_ecommerce_products
+  - name: stg_ecommerce__products
     description: ""
     columns:
       - name: product_id

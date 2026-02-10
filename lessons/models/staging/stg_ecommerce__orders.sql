@@ -7,6 +7,7 @@ SELECT
     -- IDs
     order_id,
     user_id,
+
     -- Timestamps
     created_at,
     returned_at,
