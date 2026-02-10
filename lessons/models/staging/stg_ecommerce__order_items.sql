@@ -12,7 +12,7 @@ SELECT
     product_id,
 
     -- Others
-    sale_price
+    sale_price AS item_sale_price
 
     -- inventory_item_id,
     -- status,
