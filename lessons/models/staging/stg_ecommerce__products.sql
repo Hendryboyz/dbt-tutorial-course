@@ -9,6 +9,7 @@ SELECT
     id AS product_id,
 
     -- Others
+    brand,
     cost,
     retail_price,
     department
@@ -16,7 +17,6 @@ SELECT
 
     -- category,
     -- name,
-    -- brand,
     -- sku,
     -- distribution_center_id
 

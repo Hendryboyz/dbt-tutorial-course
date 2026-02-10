@@ -6,12 +6,29 @@ models:
     columns:
       - name: product_id
         description: ""
+        tests:
+          - not_null
+          - unique
+
+      - name: brand
+        description: "Brand of the product"
 
       - name: cost
         description: ""
+        tests:
+          - not_null
 
       - name: retail_price
         description: ""
+        tests:
+          - not_null
 
       - name: department
         description: ""
+        tests:
+          - not_null
+          - accepted_values:
+              values:
+                - "Men"
+                - "Women"
+              quote: true
