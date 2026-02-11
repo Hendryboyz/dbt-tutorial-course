@@ -8,3 +8,4 @@ sources:
       - name: order_items
       - name: orders
       - name: products
+      - name: distribution_centers
