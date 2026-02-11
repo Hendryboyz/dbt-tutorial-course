@@ -9,3 +9,4 @@ sources:
       - name: orders
       - name: products
       - name: distribution_centers
+      - name: events
