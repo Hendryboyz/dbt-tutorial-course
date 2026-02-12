@@ -10,9 +10,6 @@ models:
           - not_null
           - unique
 
-      - name: brand
-        description: "Brand of the product"
-
       - name: cost
         description: ""
         tests:
@@ -32,3 +29,19 @@ models:
                 - "Men"
                 - "Women"
               quote: true
+
+      - name: brand
+        description: "Brand of the product"
+
+    latest_version: 2
+    versions:
+      - v: 1
+        columns:
+        - include: all
+          exclude: [brand]
+
+      - v: 2
+        config:
+          alias: stg_ecommerce__products
+        columns:
+        - include: all
