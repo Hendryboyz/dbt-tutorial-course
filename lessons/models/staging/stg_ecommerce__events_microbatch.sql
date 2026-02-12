@@ -1,12 +1,15 @@
 {{
     config(
         materialized='incremental',
-        unique_key='event_id',
+        incremental_strategy='microbatch',
+        event_time='created_at',
+        batch_size='month',
+        begin='2025-01-01',
         on_schema_change='sync_all_columns',
 		partition_by={
 			"field": "created_at",
 			"data_type": "timestamp",
-			"granularity": "day"
+			"granularity": "month"
 		}
     )
 }}
@@ -32,7 +35,3 @@ SELECT
 	event_type
 
 FROM source
-
-{% if is_incremental() %}
-WHERE created_at > (SELECT MAX(created_at) FROM {{ this }})
-{% endif %}

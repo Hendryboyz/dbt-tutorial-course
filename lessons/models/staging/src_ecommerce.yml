@@ -10,3 +10,5 @@ sources:
       - name: products
       - name: distribution_centers
       - name: events
+        config:
+          event_time: created_at
