@@ -3,6 +3,10 @@ version: 2
 models:
   - name: dim_orders
     description: "Table of order level information"
+    config:
+      group: sales
+
+    access: private
     columns:
 
     # Columns from stg_ecommerce__orders
